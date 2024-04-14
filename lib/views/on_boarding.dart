@@ -53,7 +53,7 @@ class OnBoardingView extends StatelessWidget {
               ),
               const SizedBox(height: 10),
               Text(
-                'Ger your groceries in as fast as one hour',
+                'Get your groceries in as fast as one hour',
                 style: TextStyle(
                   color: Colors.grey,
                   fontSize: 1.sp * 16,
@@ -65,7 +65,7 @@ class OnBoardingView extends StatelessWidget {
                   onTap: ()async{
                     final prefs = await SharedPreferences.getInstance();
                     prefs.setBool('onBoarding', true);
-                    if (Navigator.canPop(context))return;  
+                  //  if ()return;  
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(
