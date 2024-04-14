@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/constants.dart';
+import 'package:nectarapp/widgets/custom_button.dart';
 
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
@@ -17,46 +19,46 @@ class OnBoardingView extends StatelessWidget {
               fit: BoxFit.fill,
               image: AssetImage(
                 'assets/images/background.jpg',
+                
               ),
             ),
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child: Column(mainAxisAlignment: MainAxisAlignment.center, 
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center, 
             children: [
                const  Spacer(flex: 3,),
-              Image.asset('assets/images/Vector.png'),
-              const Text(
-                'Welcome To our store',
-                softWrap: true,
+              Image.asset('assets/images/Vector.png',height: 1.sp * 50,width: 0.5.sp * 48,),
+               Text(
+                'Welcome',
                 style: TextStyle(
                   color: Colors.white,
-                  fontSize: 48,
+                  fontSize: 1.sp *32,
+                  fontFamily: 'Gilroy-Medium',
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+               Text(
+                'to our store',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 1.sp*32,
                   fontFamily: 'Gilroy-Medium',
                   fontWeight: FontWeight.w600,
                 ),
               ),
               const SizedBox(height: 10),
-              const Text(
+               Text(
                 'Ger your groceries in as fast as one hour',
                 style: TextStyle(
                   color: Colors.grey,
-                  fontSize: 16,
+                  fontSize: 1.sp * 16,
                   fontFamily: 'Gilroy-Medium',
                 ),
               ),
               const SizedBox(height: 50),
-              Container(
-                padding: const EdgeInsets.symmetric(vertical:  20),
-                width: MediaQuery.of(context).size.width,
-                alignment: Alignment.center,
-                decoration: BoxDecoration(
-                  color: kPrimaryColor,
-                  borderRadius: BorderRadius.circular(15),
-            
-                ),
-                child:const Text('Get Started',),
-              ),
+              const CustomButton(text: 'Get Started'),
               const Spacer(flex: 1,),
             ]),
           ),
