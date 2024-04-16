@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/views/sign_in_view.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
+
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
 
@@ -19,9 +21,7 @@ class OnBoardingView extends StatelessWidget {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
-            child:
-                Column( 
-                  children: [
+            child: Column(children: [
               const Spacer(
                 flex: 3,
               ),
@@ -56,7 +56,15 @@ class OnBoardingView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 50),
-            const  CustomButton(
+              CustomButton(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignInView(),
+                      ),
+                    );
+                  },
                   text: 'Get Started'),
               const Spacer(
                 flex: 1,
