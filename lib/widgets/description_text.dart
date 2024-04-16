@@ -8,7 +8,7 @@ class DescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
     style: TextStyle(
-      color: Color(0xff7C7C7C),
+      color:const Color(0xff7C7C7C),
       fontSize: 1.sp * 16,
       fontFamily: 'Gilroy-Medium',
     ),
