@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/views/home_view.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 class OnBoardingView extends StatelessWidget {
   const OnBoardingView({super.key});
 
@@ -11,8 +9,6 @@ class OnBoardingView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: Container(
-          height: MediaQuery.of(context).size.height,
-          width: MediaQuery.of(context).size.width,
           decoration: const BoxDecoration(
             image: DecorationImage(
               fit: BoxFit.fill,
@@ -24,14 +20,13 @@ class OnBoardingView extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child:
-                Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Column( 
+                  children: [
               const Spacer(
                 flex: 3,
               ),
               Image.asset(
                 'assets/images/Vector.png',
-                height: 1.sp * 50,
-                width: 0.5.sp * 48,
               ),
               Text(
                 'Welcome',
@@ -61,18 +56,7 @@ class OnBoardingView extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 50),
-              CustomButton(
-                  onTap: ()async{
-                    final prefs = await SharedPreferences.getInstance();
-                    prefs.setBool('onBoarding', true);
-                  //  if ()return;  
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeView(),
-                      ),
-                    );
-                  },
+            const  CustomButton(
                   text: 'Get Started'),
               const Spacer(
                 flex: 1,

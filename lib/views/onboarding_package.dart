@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:nectarapp/constants.dart';
 import 'package:nectarapp/views/home_view.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -45,18 +44,7 @@ class OnBoardingPackage extends StatelessWidget {
             image: Image.asset(
               'assets/images/Vector.png',
             ),
-            footer: CustomButton(text: 'Get Started',  
-            onTap: ()async{
-                    final prefs = await SharedPreferences.getInstance();
-                    prefs.setBool('onBoarding', true);
-                    if (Navigator.canPop(context))return;  
-                    Navigator.pushReplacement(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeView(),
-                      ),
-                    );
-                  },)
+            footer:const CustomButton(text: 'Get Started',)
           ),
         ]);
   }

@@ -2,27 +2,20 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/views/onboarding_package.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'views/splash_view.dart';
 
 void main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  final pref = await SharedPreferences.getInstance();
-  final onBoarding = pref.getBool('onBoarding') ?? false;
   runApp(
-    DevicePreview(
+  /*  DevicePreview(
       enabled: !kReleaseMode,
-      builder: (context) =>  NectarApp(
-        onBoarding: onBoarding,
-      ), // Wrap your app
-    ),
+      builder: (context) => const NectarApp()  , 
+      */// Wrap your app
+      const NectarApp() 
   );
 }
 
 class NectarApp extends StatelessWidget {
-  const NectarApp({super.key, required this.onBoarding});
-  final bool onBoarding;
+  const NectarApp({super.key,});
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
@@ -35,7 +28,7 @@ class NectarApp extends StatelessWidget {
             locale: DevicePreview.locale(context),
             builder: DevicePreview.appBuilder,
             debugShowCheckedModeBanner: false,
-            home:  SplashView(onBoarding: onBoarding,),
+            home:const  SplashView(),
           );
         });
   }
