@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/helper/shared_perferance.dart';
 import 'package:nectarapp/views/sign_in_view.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 
@@ -58,6 +59,8 @@ class OnBoardingView extends StatelessWidget {
               const SizedBox(height: 50),
               CustomButton(
                   onTap: () {
+                    SharedPereferenceHelper()
+                        .saveData(key: 'isOnBoard', value: true);
                     Navigator.pushReplacement(
                       context,
                       MaterialPageRoute(

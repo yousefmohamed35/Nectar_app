@@ -5,9 +5,11 @@ class SharedPereferenceHelper {
   init() async {
     sharedPreferences = await SharedPreferences.getInstance();
   }
-
-  dynamic getData({ required String key}) {
+String? getDataString({ required String key}) {
     return sharedPreferences.getString(key);
+  }
+  dynamic getData({ required String key}) {
+    return sharedPreferences.get(key);
   }
 Future<bool>saveData({ required String key, required dynamic value}) async {
     if(value is bool) {
