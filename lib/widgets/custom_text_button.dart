@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectarapp/views/forget_password.dart';
 
 class CustomTextButtonForgetPassword extends StatelessWidget {
   const CustomTextButtonForgetPassword({super.key});
@@ -8,7 +9,9 @@ class CustomTextButtonForgetPassword extends StatelessWidget {
     return Align(
       alignment: Alignment.centerRight,
       child: TextButton(
-        onPressed: (){}, child: const Text('Forgot Password?',style: TextStyle(color: Color(0xff181725),),
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => const ForgetPasswordView(),));
+        }, child: const Text('Forgot Password?',style: TextStyle(color: Color(0xff181725),),
         ),
       ),
     );
