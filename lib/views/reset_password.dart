@@ -1,6 +1,7 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/widgets/Custom_text_field.dart';
+import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 import 'package:nectarapp/widgets/pin_code.dart';
@@ -32,18 +33,33 @@ class ResetPassword extends StatelessWidget {
                 )
               ]
             ),
-            child:const Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-             HeaderText(text: 'Reset Password'),
-             DescriptionText(text: 'Enter your email for verification process we will send 5 digits code to your email'),
-             Text('Enter the 5 digits code',style: TextStyle(
-              fontSize: 16,
-              color: Color(0xff7C7C7C),
-              fontWeight: FontWeight.bold,
-             ),),
-             PinCode(),
-              ]
+            child: Padding(
+              padding: EdgeInsets.symmetric(horizontal: 1.sp*16,vertical: 1.sp*48),
+              child:  SingleChildScrollView(
+                physics:const BouncingScrollPhysics(),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+              const HeaderText(text: 'Reset Password'),
+                 SizedBox(height: 1.sp*10,),
+              const   DescriptionText(text: 'Enter your email for verification process we will send 5 digits code to your email'),
+                 SizedBox(height: 1.sp*40,),
+                 Text('Enter the 5 digits code',style: TextStyle(
+                  fontSize: 1.sp*16,
+                  color:const Color(0xff7C7C7C),
+                  fontWeight: FontWeight.bold,
+                 ),),
+                 SizedBox(height: 1.sp*10,),
+              const   PinCode(),
+                 SizedBox(height: 1.sp*35,),
+                const CustomTextField(text: 'Password'),
+                 SizedBox(height: 1.sp*30,),
+                const CustomTextField(text: 'Confirm Password'),
+                 SizedBox(height: 1.sp*40,),
+                const CustomButton(text: 'Reset Password'),
+                  ]
+                ),
+              ),
             )
            ),
          ),

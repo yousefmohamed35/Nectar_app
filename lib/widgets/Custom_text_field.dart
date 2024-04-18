@@ -23,9 +23,9 @@ class CustomTextField extends StatelessWidget {
         SizedBox(
           height: 1.sp * 50,
           child: TextField(
-              obscureText: text == 'Password' ? isObscure : false,
+              obscureText: text == 'Password' || text == 'Confirm Password' ? isObscure : false,
               decoration: InputDecoration(
-                  suffixIcon: text == 'Password'
+                  suffixIcon: text == 'Password' || text == 'Confirm Password'
                       ? isObscure
                           ? IconButton(
                               onPressed: onPressed,
