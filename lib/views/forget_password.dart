@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/views/reset_password.dart';
 import 'package:nectarapp/widgets/Custom_text_field.dart';
 import 'package:nectarapp/widgets/custom_app_bar.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
@@ -11,36 +12,67 @@ class ForgetPasswordView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: Container(
-        padding:  EdgeInsets.symmetric(horizontal: 1.sp*16,vertical: 1.sp*32),
-      height: MediaQuery.of(context).size.height,
-      width: double.infinity,
-      decoration:const  BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/backgroundimage.png',),
-          fit: BoxFit.fill
-        ),
-      ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-          const  CustomAppBar(),
-             SizedBox(height:1.sp*10,),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children:[ Image.asset('assets/images/carrot.png'),],
+        padding:
+            EdgeInsets.symmetric(horizontal: 1.sp * 16, vertical: 1.sp * 32),
+        height: MediaQuery.of(context).size.height,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage(
+                'assets/images/backgroundimage.png',
               ),
-      const  Spacer(flex:2,),
-          const  HeaderText(text: 'Forget Password',),
-           SizedBox(height: 1.sp*10,),
-          const  DescriptionText(text: 'Enter your email for verification process we will send 5 digits code to your email'),
-           SizedBox(height:1.sp *30,),
-          const  CustomTextField(text: 'Email',),
-          SizedBox(height: 1.sp*60,),
-            const CustomButton(text: 'continue',),
-          const  Spacer(flex: 3,),
-          ],
+              fit: BoxFit.fill),
+        ),
+        child: SingleChildScrollView(
+          physics: const BouncingScrollPhysics(),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const CustomAppBar(),
+              SizedBox(
+                height: 1.sp * 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Image.asset('assets/images/carrot.png'),
+                ],
+              ),
+               SizedBox(height:1.sp*220,),
+              const HeaderText(
+                text: 'Forget Password',
+              ),
+              SizedBox(
+                height: 1.sp * 10,
+              ),
+              const DescriptionText(
+                  text:
+                      'Enter your email for verification process we will send 5 digits code to your email'),
+              SizedBox(
+                height: 1.sp * 30,
+              ),
+              const CustomTextField(
+                text: 'Email',
+              ),
+              SizedBox(
+                height: 1.sp * 60,
+              ),
+              CustomButton(
+                onTap: () {
+                  Navigator.pushReplacement(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ResetPassword(),
+                    ),
+                  );
+                },
+                text: 'continue',
+              ),
+              
+            ],
+          ),
         ),
       ),
     );
