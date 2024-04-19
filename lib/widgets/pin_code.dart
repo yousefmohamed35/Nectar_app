@@ -7,20 +7,29 @@ class PinCode extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return PinCodeTextField(
-      mainAxisAlignment: MainAxisAlignment.spaceAround,
-      appContext: context,
-      length: 5,
-    enableActiveFill: true,
-      pinTheme: PinTheme(
-        shape: PinCodeFieldShape.box,
-        borderRadius: BorderRadius.circular(10),
-        fieldWidth: 50,
-      inactiveColor: kPrimaryColor,
-      selectedColor: kPrimaryColor,
-      activeFillColor: kPrimaryColor,
-      selectedFillColor: kPrimaryColor,
-      inactiveFillColor: kPrimaryColor
+    return Container(
+      alignment: Alignment.center,
+      padding: const EdgeInsets.only(left: 16, right: 16,top: 16),
+    decoration: BoxDecoration(
+      shape: BoxShape.rectangle,
+      borderRadius: BorderRadius.circular(20),
+      border: Border.all(color: kPrimaryColor,)
+    ),
+      child: PinCodeTextField(
+        mainAxisAlignment: MainAxisAlignment.spaceAround,
+        appContext: context,
+        length: 6,
+      enableActiveFill: true,
+        pinTheme: PinTheme(
+          shape: PinCodeFieldShape.box,
+          borderRadius: BorderRadius.circular(10),
+          fieldWidth: 50,
+        inactiveColor: kPrimaryColor,
+        selectedColor: kPrimaryColor,
+        activeFillColor: kPrimaryColor,
+        selectedFillColor: kPrimaryColor,
+        inactiveFillColor: kPrimaryColor
+        ),
       ),
     );
   }
