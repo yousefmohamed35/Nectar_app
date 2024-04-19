@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/views/reset_password.dart';
 import 'package:nectarapp/widgets/Custom_text_field.dart';
 import 'package:nectarapp/widgets/custom_app_bar.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
@@ -40,7 +39,9 @@ class ForgetPasswordView extends StatelessWidget {
                   Image.asset('assets/images/carrot.png'),
                 ],
               ),
-               SizedBox(height:1.sp*220,),
+              SizedBox(
+                height: 1.sp * 220,
+              ),
               const HeaderText(
                 text: 'Forget Password',
               ),
@@ -61,16 +62,16 @@ class ForgetPasswordView extends StatelessWidget {
               ),
               CustomButton(
                 onTap: () {
-                  Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ResetPassword(),
-                    ),
-                  );
+                  showModalBottomSheet(
+                      context: context,
+                      builder: (context) {
+                        return Container(
+                          width: MediaQuery.of(context).size.width,
+                        );
+                      });
                 },
                 text: 'continue',
               ),
-              
             ],
           ),
         ),
