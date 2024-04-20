@@ -1,6 +1,7 @@
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:nectarapp/views/home_view.dart';
+import 'package:nectarapp/widgets/reset_password_accept_body.dart';
 
 class ResetPasswordAccept extends StatelessWidget {
   const ResetPasswordAccept({super.key});
@@ -8,13 +9,9 @@ class ResetPasswordAccept extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return FlutterSplashScreen.fadeIn(
-      childWidget: SizedBox(
-         height: 200,
-         width: 200,
-         child:,
-      ),
+      childWidget:const ResetPasswordAcceptBody(),
       backgroundColor: Colors.white,
-      duration: const Duration(seconds: 5),
+      duration: const Duration(seconds: 2),
       animationDuration: Durations.long2,
       nextScreen: const HomeView(),
     );
