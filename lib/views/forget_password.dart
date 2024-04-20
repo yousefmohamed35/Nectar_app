@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/widgets/Custom_text_field.dart';
-import 'package:nectarapp/widgets/bottom_sheet.dart';
+import 'package:nectarapp/widgets/bottom_sheet_pin_code.dart';
 import 'package:nectarapp/widgets/custom_app_bar.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
@@ -13,7 +13,6 @@ class ForgetPasswordView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      resizeToAvoidBottomInset: false,
       body: Container(
         padding:
             EdgeInsets.symmetric(horizontal: 1.sp * 16, vertical: 1.sp * 32),
@@ -71,7 +70,7 @@ class ForgetPasswordView extends StatelessWidget {
                     ),
                       context: context,
                       builder: (context) {
-                        return const BottomSheetBody();
+                        return const BottomSheetPinCode();
                       });
                 },
                 text: 'continue',

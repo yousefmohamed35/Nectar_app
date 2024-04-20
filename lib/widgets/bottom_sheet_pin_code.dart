@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/widgets/bottom_sheet.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
@@ -29,7 +30,21 @@ class BottomSheetPinCode extends StatelessWidget {
             SizedBox(height: 1.sp * 20,),
           const  PinCode(),
             SizedBox(height: 1.sp * 40,),
-            const CustomButton(text: 'reset password',),
+           CustomButton(
+              onTap: () {
+                  Navigator.pop(context);
+                  showModalBottomSheet(
+                    isScrollControlled: true,
+                    shape:  RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(24)
+                    ),
+                      context: context,
+                      builder: (context) {
+                        return const BottomSheetBody();
+                      });
+                },
+                text: 'Reset Password',
+              ),
           ]
         ),
       ),

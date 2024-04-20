@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/widgets/Custom_text_field.dart';
-import 'package:nectarapp/widgets/bottom_sheet_pin_code.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
@@ -73,15 +72,7 @@ class _BottomSheetBodyState extends State<BottomSheetBody> {
                 height: 1.sp * 40,
               ),
               CustomButton(
-                onTap: () {
-                  Navigator.pop(context);
-                  showModalBottomSheet(
-                      context: context,
-                      builder: (context) {
-                        return const BottomSheetPinCode();
-                      });
-                },
-                text: 'Reset Password',
+            text: 'reset password',
               ),
             ]),
       ),
