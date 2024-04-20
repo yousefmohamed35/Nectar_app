@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/views/reset_password_accept.dart';
 import 'package:nectarapp/widgets/Custom_text_field.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
@@ -72,6 +73,9 @@ class _BottomSheetBodyState extends State<BottomSheetBody> {
                 height: 1.sp * 40,
               ),
               CustomButton(
+                onTap: () {
+                  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const ResetPasswordAccept(),));
+                },
             text: 'reset password',
               ),
             ]),
