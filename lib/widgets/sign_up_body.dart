@@ -40,11 +40,11 @@ class _SignInViewState extends State<SignUpBody> {
             children: [
                 SizedBox(height: 1.sp *50,),
               Align(child: Image.asset('assets/images/carrot.png')),
-              SizedBox(height: 1.sp *150,),
+              SizedBox(height: 1.sp *120,),
             const  HeaderText( text: 'Sign Up',),
               SizedBox(height: 1.sp * 5,),
             const  DescriptionText(text: 'Enter your credentials to continue'),
-              SizedBox(height: 1.sp * 20,),
+              SizedBox(height: 1.sp * 50,),
             const  CustomTextField(text: 'Username',),
               SizedBox(
                 height: 1.sp * 10,
@@ -64,7 +64,7 @@ class _SignInViewState extends State<SignUpBody> {
             },),
             SizedBox(height: 1.sp * 10,),
             const  CustomServiceAndPolicyText(),
-              SizedBox(height: 1.sp * 10,),
+              SizedBox(height: 1.sp * 40,),
             const  CustomButton(text: 'Sign Up'),
               SizedBox(height: 1.sp * 20,),
             const  CustomAlreadyHaveAccount(),
