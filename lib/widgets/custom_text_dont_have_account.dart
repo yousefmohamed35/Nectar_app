@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/constants.dart';
 import 'package:nectarapp/views/sign_up_view.dart';

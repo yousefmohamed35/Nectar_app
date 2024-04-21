@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/widgets/Custom_text_field.dart';
+import 'package:nectarapp/widgets/custom_already_have_account.dart';
 import 'package:nectarapp/widgets/custom_app_bar.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_service_and_policy_text.dart';
@@ -61,11 +62,12 @@ class _SignInViewState extends State<SignUpBody> {
                 
               });
             },),
+            SizedBox(height: 1.sp * 10,),
             const  CustomServiceAndPolicyText(),
               SizedBox(height: 1.sp * 10,),
             const  CustomButton(text: 'Sign Up'),
               SizedBox(height: 1.sp * 20,),
-            const  CustomDontHaveAccount(),
+            const  CustomAlreadyHaveAccount(),
                 
                 
             ],
