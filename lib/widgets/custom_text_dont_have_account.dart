@@ -1,28 +1,36 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/constants.dart';
+import 'package:nectarapp/views/sign_up_view.dart';
 
 class CustomDontHaveAccount extends StatelessWidget {
   const CustomDontHaveAccount({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return  Row(
     mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
           'Dont have an account?',
           style: TextStyle(
-            fontSize: 16,
+            fontSize: 1.sp*16,
           fontFamily: 'Gilroy-Medium',
           fontWeight: FontWeight.w600,
           )
         ),
-        Text('SignUp',style: TextStyle(
-          color: kPrimaryColor,
-          fontSize: 16,
-          fontFamily: 'Gilroy-Medium',
-          fontWeight: FontWeight.w600,
-          ),)
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpView(),));
+          },
+          child: Text('SignUp',style: TextStyle(
+            color: kPrimaryColor,
+            fontSize: 1.sp*16,
+            fontFamily: 'Gilroy-Medium',
+            fontWeight: FontWeight.w600,
+            ),),
+        )
       ],
     );
   }
