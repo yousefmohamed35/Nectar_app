@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/helper/shared_perferance.dart';
 import 'package:nectarapp/views/on_boarding.dart';
 import 'package:nectarapp/views/sign_in_view.dart';
 import '../constants.dart';
-import '../widgets/splash_body.dart';
-
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -31,7 +30,11 @@ class _SplashViewState extends State<SplashView> {
         debugPrint("On End");
       },
       backgroundColor: kPrimaryColor,
-      childWidget: const SplashViewBody(),
+      childWidget: SizedBox(
+        height: 300.h,
+        width: 300.w,
+        child: Image.asset(splashScreenImage),
+        ),
       duration: const Duration(seconds: 5),
       animationDuration: Durations.long2,
       nextScreen: isVisited ? const SignInView() : const OnBoardingView(),
