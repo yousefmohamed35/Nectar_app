@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/widgets/Custom_text_field.dart';
+import 'package:nectarapp/widgets/Custom_text_field_email.dart';
 import 'package:nectarapp/widgets/custom_already_have_account.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_service_and_policy_text.dart';
@@ -42,15 +42,15 @@ class _SignInViewState extends State<SignUpBody> {
               SizedBox(height: 1.sp * 5,),
             const  DescriptionText(text: 'Enter your credentials to continue'),
               SizedBox(height: 1.sp * 50,),
-            const  CustomTextField(text: 'Username',),
+            const  CustomTextFieldEmail(text: 'Username',),
               SizedBox(
                 height: 1.sp * 10,
               ),
-            const  CustomTextField(text: 'Email',),
+            const  CustomTextFieldEmail(text: 'Email',),
               SizedBox(
                 height: 1.sp * 10,
               ),
-              CustomTextField(
+              CustomTextFieldEmail(
                 isObscure: isObscure,
                 text: 'Password',
               onPressed: () {

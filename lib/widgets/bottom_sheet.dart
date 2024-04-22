@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/views/reset_password_accept.dart';
-import 'package:nectarapp/widgets/Custom_text_field.dart';
+import 'package:nectarapp/widgets/Custom_text_field_email.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
@@ -44,13 +44,13 @@ class _BottomSheetBodyState extends State<BottomSheetBody> {
               SizedBox(
                 height: 1.sp * 30,
               ),
-              const CustomTextField(
+              const CustomTextFieldEmail(
                 text: 'Email',
               ),
               SizedBox(
                 height: 1.sp * 30,
               ),
-              CustomTextField(
+              CustomTextFieldEmail(
                 isObscure: isObscurep,
                 text: 'Password',
                 onPressed: () {
@@ -61,7 +61,7 @@ class _BottomSheetBodyState extends State<BottomSheetBody> {
               SizedBox(
                 height: 1.sp * 30,
               ),
-              CustomTextField(
+              CustomTextFieldEmail(
                 isObscure: isObscurec,
                 text: 'Password',
                 onPressed: () {
