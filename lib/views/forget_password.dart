@@ -15,7 +15,7 @@ class ForgetPasswordView extends StatelessWidget {
     return Scaffold(
       body: Container(
         padding:
-            EdgeInsets.symmetric(horizontal: 1.sp * 16, vertical: 1.sp * 32),
+            EdgeInsets.symmetric(horizontal: 16.sp, vertical: 32.sp),
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration: const BoxDecoration(
@@ -32,7 +32,7 @@ class ForgetPasswordView extends StatelessWidget {
             children: [
               const CustomAppBar(),
               SizedBox(
-                height: 1.sp * 20,
+                height: 20.h,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -41,25 +41,25 @@ class ForgetPasswordView extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: 1.sp * 220,
+                height:  220.h,
               ),
               const HeaderText(
                 text: 'Forget Password',
               ),
               SizedBox(
-                height: 1.sp * 10,
+                height: 10.h,
               ),
               const DescriptionText(
                   text:
                       'Enter your email for verification process we will send 5 digits code to your email'),
               SizedBox(
-                height: 1.sp * 30,
+                height:  30.h,
               ),
               const CustomTextFieldEmail(
                 text: 'Email',
               ),
               SizedBox(
-                height: 1.sp * 60,
+                height:  60.h,
               ),
               CustomButton(
                 onTap: () {
