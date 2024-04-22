@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:another_flutter_splash_screen/another_flutter_splash_screen.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/helper/shared_perferance.dart';
 import 'package:nectarapp/views/on_boarding.dart';
-import 'package:nectarapp/views/sign_in_view.dart';
 import '../constants.dart';
 
 class SplashView extends StatefulWidget {
