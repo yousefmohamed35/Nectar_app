@@ -8,28 +8,30 @@ class CustomDontHaveAccount extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Row(
-    mainAxisAlignment: MainAxisAlignment.center,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(
-          'Dont have an account?',
-          style: TextStyle(
-            fontSize: 1.sp*16,
-          fontFamily: 'Gilroy-Medium',
-          fontWeight: FontWeight.w600,
-          )
-        ),
-        GestureDetector(
-          onTap: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => const SignUpView(),));
-          },
-          child: Text('SignUp',style: TextStyle(
-            color: kPrimaryColor,
-            fontSize: 1.sp*16,
-            fontFamily: 'Gilroy-Medium',
-            fontWeight: FontWeight.w600,
-            ),),
-        )
+        Text('Dont have an account?',
+            style: TextStyle(
+              fontSize: 1.sp * 16,
+              fontFamily: 'Gilroy-Medium',
+              fontWeight: FontWeight.w600,
+            )),
+        TextButton(
+            style: TextButton.styleFrom(padding: EdgeInsets.zero),
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => const SignUpView(),),);
+            },
+            child: Text(
+              'SignUp',
+              style: TextStyle(
+                color: kPrimaryColor,
+                fontSize: 16.sp,
+                fontFamily: 'Gilroy-Medium',
+                fontWeight: FontWeight.w600,
+              ),
+            ))
       ],
     );
   }

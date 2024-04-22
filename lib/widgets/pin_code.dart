@@ -1,36 +1,100 @@
 import 'package:flutter/material.dart';
-import 'package:nectarapp/constants.dart';
-import 'package:pin_code_fields/pin_code_fields.dart';
+import 'package:flutter/services.dart';
 
-class PinCode extends StatelessWidget {
-  const PinCode({super.key});
+class OtpScreen extends StatefulWidget {
+ const OtpScreen({super.key});
+ @override
+ State<OtpScreen> createState() => _OtpScreenState();
+}
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: const EdgeInsets.only(left: 16, right: 16,top: 16),
-    decoration: BoxDecoration(
-      shape: BoxShape.rectangle,
-      borderRadius: BorderRadius.circular(20),
-      border: Border.all(color: kPrimaryColor,)
-    ),
-      child: PinCodeTextField(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        appContext: context,
-        length: 6,
-      enableActiveFill: true,
-        pinTheme: PinTheme(
-          shape: PinCodeFieldShape.box,
-          borderRadius: BorderRadius.circular(10),
-          fieldWidth: 50,
-        inactiveColor: kPrimaryColor,
-        selectedColor: kPrimaryColor,
-        activeFillColor: kPrimaryColor,
-        selectedFillColor: kPrimaryColor,
-        inactiveFillColor: kPrimaryColor
-        ),
-      ),
-    );
-  }
+class _OtpScreenState extends State<OtpScreen> {
+ List<TextEditingController> otpController =
+ List.generate(6, (index) => TextEditingController());
+
+ @override
+ Widget build(BuildContext context) {
+ return Scaffold(
+ body: _generateTextFormField(),
+ );
+ }
+
+ Widget _generateTextFormField() {
+ return Column(
+ mainAxisAlignment: MainAxisAlignment.center,
+ children: [
+ const Text(
+ 'Otp Screen',
+ style: TextStyle(
+ fontWeight: FontWeight.bold,
+ fontSize: 35,
+ ),
+ ),
+ const SizedBox(
+ height: 15,
+ ),
+ Row(
+ mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+ children: List.generate(
+ otpController.length,
+ (index) {
+ return _textFormField(index);
+ },
+ ),
+ ),
+ ],
+ );
+ }
+
+ Widget _textFormField(int index) {
+ return Center(
+ child: SizedBox(
+ height: 70,
+ width: 50,
+ child: TextFormField(
+ textAlign: TextAlign.center,
+ keyboardType: TextInputType.number,
+ controller: otpController[index],
+ inputFormatters: [
+ FilteringTextInputFormatter.digitsOnly,
+ LengthLimitingTextInputFormatter(1),
+ ],
+ decoration: InputDecoration(
+ enabledBorder: OutlineInputBorder(
+ borderRadius: BorderRadius.circular(10),
+ borderSide: const BorderSide(
+ color: Colors.black,
+ ),
+ ),
+ focusedBorder: OutlineInputBorder(
+ borderRadius: BorderRadius.circular(10),
+ borderSide: const BorderSide(
+ color: Colors.blueAccent,
+ ),
+ ),
+ ),
+ onChanged: (value) {
+ if (value.isEmpty) {
+ _focusPreviousField(index);
+ } else {
+ _focusNextField(index + 1);
+ }
+ },
+ ),
+ ),
+ );
+ }
+
+ void _focusNextField(int index) {
+ if (index < 6) {
+ FocusScope.of(context).nextFocus();
+ }
+ }
+
+ void _focusPreviousField(int index) {
+ if (index > 0) {
+ FocusScope.of(context).previousFocus();
+ }
+ }
+
+ 
 }

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/constants.dart';
 import 'package:nectarapp/widgets/bottom_sheet.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
@@ -13,8 +14,8 @@ class BottomSheetPinCode extends StatelessWidget {
   Widget build(BuildContext context) {
     return Padding(
       padding:  EdgeInsets.only(
-        top: 1.sp*48,
-        left: 1.sp*16,
+        top: 48.sp,
+        left: 16.sp,
         right: 1.sp*16,
         bottom: MediaQuery.of(context).viewInsets.bottom + 32,
       ),
@@ -23,13 +24,13 @@ class BottomSheetPinCode extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
           const  HeaderText(text: 'Reset Password'),
-            SizedBox(height: 1.sp * 10,),
+            SizedBox(height:  10.h,),
           const  DescriptionText(text: 'Enter new password for your account ro reset password'),
-            SizedBox(height: 1.sp * 30,),
-            Text('Enter the 6 digits code',style: TextStyle(color: const Color(0xff7C7C7C),fontSize: 1.sp * 16,fontFamily: 'Gilroy-Medium',fontWeight: FontWeight.w600),),
-            SizedBox(height: 1.sp * 20,),
-          const  PinCode(),
-            SizedBox(height: 1.sp * 40,),
+            SizedBox(height:30.h,),
+            Text('Enter the 6 digits code',style: TextStyle(color: kSecondaryColor,fontSize: 16.sp,fontFamily: 'Gilroy-Medium',fontWeight: FontWeight.w600),),
+            SizedBox(height: 20.h,),
+          const  OtpScreen(),
+            SizedBox(height:  40.h,),
            CustomButton(
               onTap: () {
                   Navigator.pop(context);

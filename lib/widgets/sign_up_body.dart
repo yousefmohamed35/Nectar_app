@@ -4,6 +4,7 @@ import 'package:nectarapp/widgets/Custom_text_field_email.dart';
 import 'package:nectarapp/widgets/custom_already_have_account.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_service_and_policy_text.dart';
+import 'package:nectarapp/widgets/custom_text_field_password.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 class SignUpBody extends StatefulWidget {
@@ -50,15 +51,9 @@ class _SignInViewState extends State<SignUpBody> {
               SizedBox(
                 height: 1.sp * 10,
               ),
-              CustomTextFieldEmail(
-                isObscure: isObscure,
+                const  CustomTextFieldForPassword(
                 text: 'Password',
-              onPressed: () {
-              isObscure = !isObscure;
-              setState(() {
-                
-              });
-            },),
+              ),
             SizedBox(height: 1.sp * 10,),
             const  CustomServiceAndPolicyText(),
               SizedBox(height: 1.sp * 40,),
