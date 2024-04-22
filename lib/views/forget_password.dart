@@ -64,9 +64,10 @@ class ForgetPasswordView extends StatelessWidget {
               CustomButton(
                 onTap: () {
                   showModalBottomSheet(
+                    constraints:const BoxConstraints() ,
                     isScrollControlled: true,
-                    shape:  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(24)
+                    shape: const RoundedRectangleBorder(
+                      borderRadius: BorderRadius.only(topLeft: Radius.circular(24), topRight: Radius.circular(24)),
                     ),
                       context: context,
                       builder: (context) {

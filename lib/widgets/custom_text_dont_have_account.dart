@@ -13,25 +13,30 @@ class CustomDontHaveAccount extends StatelessWidget {
       children: [
         Text('Dont have an account?',
             style: TextStyle(
-              fontSize: 1.sp * 16,
+              fontSize: 16.sp,
               fontFamily: 'Gilroy-Medium',
               fontWeight: FontWeight.w600,
             )),
         TextButton(
-            style: TextButton.styleFrom(padding: EdgeInsets.zero),
-            onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => const SignUpView(),),);
-            },
-            child: Text(
-              'SignUp',
-              style: TextStyle(
-                color: kPrimaryColor,
-                fontSize: 16.sp,
-                fontFamily: 'Gilroy-Medium',
-                fontWeight: FontWeight.w600,
+          style: TextButton.styleFrom(padding: EdgeInsets.zero),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(
+                builder: (context) => const SignUpView(),
               ),
-            ))
+            );
+          },
+          child: Text(
+            'SignUp',
+            style: TextStyle(
+              color: kPrimaryColor,
+              fontSize: 16.sp,
+              fontFamily: 'Gilroy-Medium',
+              fontWeight: FontWeight.w600,
+            ),
+          ),
+        ),
       ],
     );
   }

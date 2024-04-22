@@ -7,15 +7,8 @@ import 'package:nectarapp/widgets/custom_text_field_password.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
-class BottomSheetBody extends StatefulWidget {
-  const BottomSheetBody({super.key});
-  @override
-  State<BottomSheetBody> createState() => _BottomSheetBodyState();
-}
-
-class _BottomSheetBodyState extends State<BottomSheetBody> {
-  bool isObscurep = true;
-  bool isObscurec = true;
+class BottomSheetConfirmEmailAndPassword extends StatelessWidget {
+  const BottomSheetConfirmEmailAndPassword({super.key});
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -31,37 +24,37 @@ class _BottomSheetBodyState extends State<BottomSheetBody> {
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               SizedBox(
-                height: 1.sp * 10,
+                height:  10.h,
               ),
               const HeaderText(
                 text: 'Reset Password',
               ),
               SizedBox(
-                height: 1.sp * 10,
+                height:  10.h,
               ),
               const DescriptionText(
                 text: 'Enter new password for your account ro reset password',
               ),
               SizedBox(
-                height: 1.sp * 30,
+                height: 30.h,
               ),
               const CustomTextFieldEmail(
                 text: 'Email',
               ),
               SizedBox(
-                height: 1.sp * 30,
+                height:  30.h,
               ),
             const  CustomTextFieldForPassword(
                 text: 'Password',
               ),
               SizedBox(
-                height: 1.sp * 30,
+                height:  30.h,
               ),
               const  CustomTextFieldForPassword(
                 text: 'confirmed Password',
               ),
               SizedBox(
-                height: 1.sp * 40,
+                height:  40.h,
               ),
               CustomButton(
                 onTap: () {
