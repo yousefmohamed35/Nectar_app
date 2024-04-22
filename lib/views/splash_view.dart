@@ -5,6 +5,7 @@ import 'package:nectarapp/helper/shared_perferance.dart';
 import 'package:nectarapp/views/on_boarding.dart';
 import 'package:nectarapp/views/sign_in_view.dart';
 import '../constants.dart';
+
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
 
@@ -13,32 +14,27 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-  bool isVisited=false;
+  bool isVisited = false;
   void initState() {
-   isVisited =
-        SharedPereferenceHelper().getData(key: 'isOnBoard') ?? false;
+    isVisited = SharedPereferenceHelper().getData(key: 'isOnBoard') ?? false;  
+     Future.delayed(const Duration(seconds: 5), () {
+  Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const OnBoardingView(),),);
+  });
     super.initState();
   }
 
+
   @override
   Widget build(BuildContext context) {
-    return FlutterSplashScreen.fadeIn(
-      onInit: () {
-        debugPrint("On Init");
-      },
-      onEnd: () {
-        debugPrint("On End");
-      },
+    return Scaffold(
       backgroundColor: kPrimaryColor,
-      childWidget: SizedBox(
-        height: 300.h,
-        width: 300.w,
-        child: Image.asset(splashScreenImage),
+      body: Center(
+        child: SizedBox(
+          height: 300.h,
+          width: 300.w,
+          child: Image.asset(splashScreenImage),
         ),
-      duration: const Duration(seconds: 5),
-      animationDuration: Durations.long2,
-      nextScreen: isVisited ? const SignInView() : const OnBoardingView(),
-      onAnimationEnd: () => debugPrint("On Fade In End"),
+      ),
     );
   }
 }
