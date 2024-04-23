@@ -20,7 +20,7 @@ class _SignInViewState extends State<SignUpBody> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        padding: const EdgeInsets.only(top: 48, left: 16, right: 16),
+        padding:  EdgeInsets.only(top: 48.sp, left: 16.sp, right: 16.sp),
         height: MediaQuery.of(context).size.height,
         width: double.infinity,
         decoration:const  BoxDecoration(
@@ -36,29 +36,29 @@ class _SignInViewState extends State<SignUpBody> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-                SizedBox(height: 1.sp *50,),
+                SizedBox(height: 50.h,),
               Align(child: Image.asset('assets/images/carrot.png')),
-              SizedBox(height: 1.sp *120,),
+              SizedBox(height: 120.h,),
             const  HeaderText( text: 'Sign Up',),
-              SizedBox(height: 1.sp * 5,),
+              SizedBox(height:  5.h,),
             const  DescriptionText(text: 'Enter your credentials to continue'),
-              SizedBox(height: 1.sp * 50,),
+              SizedBox(height:  50.h,),
             const  CustomTextFieldEmail(text: 'Username',),
               SizedBox(
-                height: 1.sp * 10,
+                height: 10.h,
               ),
             const  CustomTextFieldEmail(text: 'Email',),
               SizedBox(
-                height: 1.sp * 10,
+                height:  10.h,
               ),
                 const  CustomTextFieldForPassword(
                 text: 'Password',
               ),
-            SizedBox(height: 1.sp * 10,),
+            SizedBox(height:  10.h,),
             const  CustomServiceAndPolicyText(),
-              SizedBox(height: 1.sp * 40,),
+              SizedBox(height:  40.h,),
             const  CustomButton(text: 'Sign Up'),
-              SizedBox(height: 1.sp * 20,),
+              SizedBox(height: 20.h,),
             const  CustomAlreadyHaveAccount(),
                 
                 

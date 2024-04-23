@@ -11,14 +11,21 @@ class CustomServiceAndPolicyText extends StatelessWidget {
       children: [
         Row(
           children: [
-            Text('By continuing you agree to our ',style: TextStyle(color: const Color(0xff7C7C7C),fontSize: 1.sp * 14),),
-            Text('Terms of Service',style: TextStyle(color: kPrimaryColor,fontSize: 1.sp * 14),),
+            Text('By continuing you agree to our ',style: TextStyle(color:  kSecondaryColor,fontSize: 14.sp),),
+            TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero),
+              onPressed: (){},
+              child: Text('Terms of Service',style: TextStyle(color: kPrimaryColor,fontSize: 14.sp)),),
           ],
         ),
         Row(
           children: [
-            Text('and ',style: TextStyle(color: const Color(0xff7C7C7C),fontSize: 1.sp * 14),),
-            Text('Privacy Policy',style: TextStyle(color: kPrimaryColor,fontSize: 1.sp * 14),),
+            Text('and ',style: TextStyle(color: kSecondaryColor,fontSize: 14.sp),),
+              TextButton(
+              style: TextButton.styleFrom(padding: EdgeInsets.zero,
+                shape: const BeveledRectangleBorder(borderRadius: BorderRadius.zero),),
+              onPressed: (){},
+              child: Text('privacy policy',style: TextStyle(color: kPrimaryColor)),),
           ],
         ),
       ],
