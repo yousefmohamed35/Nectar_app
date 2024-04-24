@@ -9,7 +9,7 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          iconSize: 1.sp*24,
+          iconSize:24.sp,
           color: Colors.black,
           onPressed: () {
             Navigator.pop(context);
