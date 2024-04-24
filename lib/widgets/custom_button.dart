@@ -11,9 +11,9 @@ class CustomButton extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        padding: const EdgeInsets.symmetric(vertical: 20),
+        padding:  EdgeInsets.symmetric(vertical: 20.sp),
         width: MediaQuery.of(context).size.width,
-        height: 1.sp * 68,
+        height: 68.sp,
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: kPrimaryColor,
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
         ),
         child: Text(
           text,
-          style: TextStyle(fontSize: 1.sp * 22, color: text=='continue'?Colors.black:Colors.white,fontWeight: FontWeight.w600),
+          style: TextStyle(fontSize: 22.sp, color:Colors.white,fontWeight: FontWeight.w600),
         ),
       ),
     );
