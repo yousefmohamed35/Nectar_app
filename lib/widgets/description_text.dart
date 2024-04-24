@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/constants.dart';
 
 class DescriptionText extends StatelessWidget {
   const DescriptionText({super.key, required this.text});
@@ -8,8 +9,8 @@ class DescriptionText extends StatelessWidget {
   Widget build(BuildContext context) {
     return Text(text,
     style: TextStyle(
-      color:const Color(0xff7C7C7C),
-      fontSize: 1.sp * 16,
+      color:kSecondaryColor,
+      fontSize: 16.sp,
       fontFamily: 'Gilroy-Medium',
     ),
     );

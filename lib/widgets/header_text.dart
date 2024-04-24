@@ -10,7 +10,7 @@ final String text ;
       text,
       style: TextStyle(
         color: Colors.black,
-        fontSize: 1.sp * 26,
+        fontSize:26.sp,
         fontFamily: 'Gilroy-Medium',
         fontWeight: FontWeight.w600,
       ),

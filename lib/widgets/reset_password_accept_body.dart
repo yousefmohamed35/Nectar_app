@@ -7,25 +7,23 @@ class ResetPasswordAcceptBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(bottom: 16),
+    return Container(
+      width: double.infinity,
       child: Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
         children:  [
-          Spacer(flex: 1,),
+        SizedBox(height: 250.h,),
           Image.asset(
             'assets/images/accept.png',
-            height: 1.sp * 200,
-            width: 1.sp * 200,
+            height: 200.sp,
+            width: 200.sp,
           ),
-          SizedBox(height: 1.sp*30),
+          SizedBox(height: 30.sp),
           Text('Congratulations',style: TextStyle(fontSize: 1.sp * 32,fontWeight: FontWeight.w800),),
-          SizedBox(height: 1.sp*30),
+          SizedBox(height: 30.sp),
         const  DescriptionText(text: 'Your change Password Is Success',),
-        SizedBox(height: 1.sp*10),
+        SizedBox(height: 10.sp),
         const DescriptionText(text: 'Welcome to our app',),
-        Spacer(flex: 2,),
-        const CircularProgressIndicator(),
-        
         ]
       ),
     );
