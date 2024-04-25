@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/views/reset_password_accept.dart';
-import 'package:nectarapp/widgets/Custom_text_field_email.dart';
+import 'package:nectarapp/widgets/custom_text_field_email.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_text_field_password.dart';
 import 'package:nectarapp/widgets/description_text.dart';
