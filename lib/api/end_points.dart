@@ -12,3 +12,15 @@ class EndPoints {
     return 'ConfirmNum?Num=$phoneNumber';
   }
 }
+
+class ApiKeys {
+  static const String userName = 'username';
+  static const String phoneNumber = 'phoneNumber';
+  static const String password = 'password';
+  static const String email = 'email';
+  static const String isAuthenticated = 'isAuthenticated';
+  static const String token = 'token';
+  static const String id= 'id';
+  static const String message = 'message';
+  static const String statusCode = 'statusCode';
+}
