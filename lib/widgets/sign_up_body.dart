@@ -47,6 +47,10 @@ class _SignInViewState extends State<SignUpBody> {
               SizedBox(
                 height: 10.h,
               ),
+                const  CustomTextFieldEmail(text: 'phone Number',),
+              SizedBox(
+                height: 10.h,
+              ),
             const  CustomTextFieldEmail(text: 'Email',),
               SizedBox(
                 height:  10.h,
@@ -55,6 +59,9 @@ class _SignInViewState extends State<SignUpBody> {
                 text: 'Password',
               ),
             SizedBox(height:  10.h,),
+              const  CustomTextFieldForPassword(
+                text: 'confirm Password',
+              ),
             const  CustomServiceAndPolicyText(),
               SizedBox(height:  40.h,),
             const  CustomButton(text: 'Sign Up'),

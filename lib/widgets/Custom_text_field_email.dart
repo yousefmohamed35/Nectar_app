@@ -16,6 +16,7 @@ class CustomTextFieldEmail extends StatelessWidget {
         SizedBox(
           height: 50.sp,
           child: TextFormField(
+            keyboardType: text == 'phone number'? TextInputType.phone:TextInputType.none,
             decoration: const InputDecoration(
               focusedBorder: UnderlineInputBorder(
                 borderSide: BorderSide(color: kPrimaryColor),

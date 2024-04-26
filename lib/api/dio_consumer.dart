@@ -10,17 +10,7 @@ class DioConsumer extends ApiConsumer {
     dio.options.baseUrl=EndPoints.baseUrl;
     dio.interceptors.add(ApiInterceptors());
   }
-  @override
-  Future delete(
-      String path, Object? data, Map<String, dynamic>? queryParameters) async {
-    try {
-      final respnse =
-          await dio.delete(path, data: data, queryParameters: queryParameters);
-      return respnse.data;
-    } on DioException catch (e) {
-      return e.toString();
-    }
-  }
+
 
   @override
   Future get(
@@ -34,17 +24,6 @@ class DioConsumer extends ApiConsumer {
     }
   }
 
-  @override
-  Future patch(
-      String path, Object? data, Map<String, dynamic>? queryParameters) async {
-    try {
-      final respnse =
-          await dio.patch(path, data: data, queryParameters: queryParameters);
-      return respnse.data;
-    } on DioException catch (e) {
-      return e.toString();
-    }
-  }
 
   @override
   Future post(
