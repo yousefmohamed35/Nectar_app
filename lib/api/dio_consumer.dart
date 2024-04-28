@@ -2,15 +2,15 @@ import 'package:dio/dio.dart';
 import 'package:nectarapp/api/api_consumer.dart';
 import 'package:nectarapp/api/api_interceptors.dart';
 import 'package:nectarapp/api/end_points.dart';
+import 'package:nectarapp/errors/exception.dart';
 
 class DioConsumer extends ApiConsumer {
   final Dio dio;
 
   DioConsumer({required this.dio}) {
-    dio.options.baseUrl=EndPoints.baseUrl;
+    dio.options.baseUrl = EndPoints.baseUrl;
     dio.interceptors.add(ApiInterceptors());
   }
-
 
   @override
   Future get(
@@ -20,10 +20,9 @@ class DioConsumer extends ApiConsumer {
           await dio.get(path, data: data, queryParameters: queryParameters);
       return respnse.data;
     } on DioException catch (e) {
-      return e.toString();
+      handleDioExceptios(e);
     }
   }
-
 
   @override
   Future post(
@@ -33,7 +32,7 @@ class DioConsumer extends ApiConsumer {
           await dio.post(path, data: data, queryParameters: queryParameters);
       return respnse.data;
     } on DioException catch (e) {
-      return e.toString();
+      handleDioExceptios(e);
     }
   }
 }
