@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/views/home_view.dart';
 import 'package:nectarapp/widgets/custom_text_field_email.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_text_button.dart';
@@ -62,7 +63,12 @@ class SignInBody extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            const CustomButton(text: 'log in'),
+             CustomButton(
+              onTap: () {
+                Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) => const HomeView(),));
+              },
+              text: 'log in'
+              ),
             SizedBox(
               height:  20.h,
             ),
