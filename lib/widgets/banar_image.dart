@@ -8,13 +8,16 @@ class BanarImage extends StatelessWidget {
   Widget build(BuildContext context) {
     return CarouselSlider(
       items: [
-      Image.asset('assets/images/banner.jpg'),
+      Padding(
+        padding: const EdgeInsets.only(right: 16),
+        child: Image.asset('assets/images/banner.jpg'),
+      ),
     ], options:  CarouselOptions(
       aspectRatio: 7/3,
         viewportFraction: 1,
         autoPlay: true,
         autoPlayInterval: const Duration(seconds: 3),
-
+        enlargeCenterPage: true,
     ),
     );
   }
