@@ -11,6 +11,7 @@ class CustomItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
     width: 173.32.w,
+    margin: const EdgeInsets.only(right: 10),
       padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),

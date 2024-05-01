@@ -5,15 +5,15 @@ import 'package:nectarapp/widgets/header_text.dart';
 
 class TheTitleOfCategorySection extends StatelessWidget {
   const TheTitleOfCategorySection({
-    super.key,
+    super.key, required this.hText,
   });
-
+ final  String hText;
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        const HeaderText(text: 'Exclusive Offer'),
+         HeaderText(text: hText),
         TextButton(
           onPressed: () {},
           child: Text(
