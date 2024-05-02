@@ -13,7 +13,7 @@ class BanarImage extends StatelessWidget {
         child: Image.asset('assets/images/banner.jpg'),
       ),
     ], options:  CarouselOptions(
-      aspectRatio: 7/3,
+      aspectRatio: 8/3,
         viewportFraction: 1,
         autoPlay: true,
         autoPlayInterval: const Duration(seconds: 3),

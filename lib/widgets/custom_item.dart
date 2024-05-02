@@ -10,7 +10,8 @@ class CustomItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-    width: 173.32.w,
+    width: 173.32.sp,
+    height: 248.sp,
     margin: const EdgeInsets.only(right: 10),
       padding: EdgeInsets.all(16.sp),
       decoration: BoxDecoration(
@@ -22,10 +23,10 @@ class CustomItemCard extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
         const CustomCategoryImage(),  
-          SizedBox(height: 20.h,),
+          SizedBox(height: 30.h,),
           Text('Organic Banana',style: TextStyle(fontSize: 18.sp,fontWeight: FontWeight.w600,),),
           Text('7pcs, priceg',style: TextStyle(fontSize: 14.sp,color: kSecondaryColor),),
-            SizedBox(height: 20.h,),
+            SizedBox(height: 30.h,),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
