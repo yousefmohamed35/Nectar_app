@@ -13,7 +13,10 @@ class CustomListViewItemCard extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemCount: 8,
         itemBuilder: ((context, index) {
-        return const CustomItemCard();
+        return index==0? const Padding(
+          padding:  EdgeInsets.only(left: 16),
+          child:  CustomItemCard(),
+        ): const CustomItemCard();
       })),
     );
   }

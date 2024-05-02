@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/widgets/banar_image.dart';
 import 'package:nectarapp/widgets/custom_box_groceries.dart';
@@ -25,20 +26,19 @@ class HomeView extends StatelessWidget {
               ],
             ),
           ),
-      const  SliverAppBar(
-        flexibleSpace: FlexibleSpaceBar(
-          collapseMode: CollapseMode.pin,
-        ),
-        elevation: 0,
-        //floating: false,
-        scrolledUnderElevation: 0,
+          
+         const  SliverAppBar(
         
-        pinned: true,
-          title: CustomSearchBar(),
-        ),
-        SliverToBoxAdapter(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 16),
+          flexibleSpace: FlexibleSpaceBar(
+            centerTitle: true,
+            collapseMode: CollapseMode.pin,
+            
+          ),
+          scrolledUnderElevation: 0,  
+          pinned: true,
+            title: CustomSearchBar(),
+          ),
+           SliverToBoxAdapter(
             child: Column(
               children: [
                 const BanarImage(),
@@ -79,7 +79,6 @@ class HomeView extends StatelessWidget {
               ],
             ),
           ),
-        ),
       ]),
     );
   }

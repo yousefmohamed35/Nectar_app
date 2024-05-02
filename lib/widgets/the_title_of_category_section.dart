@@ -10,21 +10,24 @@ class TheTitleOfCategorySection extends StatelessWidget {
  final  String hText;
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-         HeaderText(text: hText),
-        TextButton(
-          onPressed: () {},
-          child: Text(
-            'See All',
-            style: TextStyle(
-                color: kPrimaryColor,
-                fontSize: 20.sp,
-                fontWeight: FontWeight.bold),
-          ),
-        )
-      ],
+    return Padding(
+      padding: const EdgeInsets.only(left: 16),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+           HeaderText(text: hText),
+          TextButton(
+            onPressed: () {},
+            child: Text(
+              'See All',
+              style: TextStyle(
+                  color: kPrimaryColor,
+                  fontSize: 20.sp,
+                  fontWeight: FontWeight.bold),
+            ),
+          )
+        ],
+      ),
     );
   }
 }

@@ -9,7 +9,7 @@ class BanarImage extends StatelessWidget {
     return CarouselSlider(
       items: [
       Padding(
-        padding: const EdgeInsets.only(right: 16),
+        padding: const EdgeInsets.only(right: 16,left: 16),
         child: Image.asset('assets/images/banner.jpg'),
       ),
     ], options:  CarouselOptions(
