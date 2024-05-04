@@ -6,6 +6,7 @@ import 'package:nectarapp/widgets/custom_add_and_decrease_item.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
+import 'package:nectarapp/widgets/nutitions_item_section.dart';
 import 'package:nectarapp/widgets/review_item_section.dart';
 import 'package:nectarapp/widgets/title_of_item_details_view.dart';
 
