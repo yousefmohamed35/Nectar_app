@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/constants.dart';
 import 'package:nectarapp/widgets/banar_image.dart';
-import 'package:nectarapp/widgets/custom_box_groceries.dart';
+import 'package:nectarapp/widgets/custom_list_view_box_groceries.dart';
 import 'package:nectarapp/widgets/custom_home_app_bar.dart';
 import 'package:nectarapp/widgets/custom_list_view_item_card.dart';
 import 'package:nectarapp/widgets/custom_search_bar.dart';
@@ -13,13 +13,13 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return NestedScrollView(
+      
       headerSliverBuilder: (BuildContext context, bool innerBoxIsScrolled) {
         return <Widget>[
           const CustomHomeAppBar(),
         ];
       },
       body: Scaffold(
-        backgroundColor: Colors.white,
         body: Column(
           children: [
           const  Padding(
@@ -58,7 +58,7 @@ class HomeView extends StatelessWidget {
                     SizedBox(
                       height: 10.h,
                     ),
-                    const CustomBoxGroceries(),
+                    const CustomListViewBoxGroceries(),
                     SizedBox(
                       height: 20.h,
                     ),
