@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/constants.dart';
+import 'package:nectarapp/views/item_details_view.dart';
 import 'package:nectarapp/widgets/custom_add_button.dart';
 import 'package:nectarapp/widgets/custom_category_image.dart';
 
@@ -11,7 +12,7 @@ class CustomItemCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        navi
+        Navigator.push(context, MaterialPageRoute(builder: (context) => const ItemDetailsView()));
       },
       child: Container(
       width: 173.32.sp,
