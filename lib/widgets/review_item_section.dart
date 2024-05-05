@@ -12,7 +12,7 @@ class ReviewSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-      HeaderText(text: 'Review',),
+    const  HeaderText(text: 'Review',),
       Row(
         children: [
           Row(children: [

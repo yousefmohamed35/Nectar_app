@@ -7,19 +7,12 @@ class CustomAddAndDecreaseItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return   Row(
+    return Row(
                 children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      Icon(Icons.minimize,size: 48.sp,color: Colors.grey,),
-                      SizedBox(height: 30.h,),
-                    ],
-                  ),
+                IconButton(onPressed: (){}, icon: Icon(Icons.remove,size: 32.sp,color: kPrimaryColor,)),
                   Container(
-                    margin: EdgeInsets.only(right: 5.sp),
-                    padding: EdgeInsets.symmetric(horizontal: 20.sp,vertical: 15.sp),
+                  width: 45.67.w,
+                    height: 45.67.w,
                     decoration: BoxDecoration(
                       border: Border.all(color: Colors.grey.shade400),
                       borderRadius: BorderRadius.circular(15),

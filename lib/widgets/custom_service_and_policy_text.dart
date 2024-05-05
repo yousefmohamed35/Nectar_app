@@ -25,7 +25,7 @@ class CustomServiceAndPolicyText extends StatelessWidget {
               style: TextButton.styleFrom(padding: EdgeInsets.zero,
                 shape: const BeveledRectangleBorder(borderRadius: BorderRadius.zero),),
               onPressed: (){},
-              child: Text('privacy policy',style: TextStyle(color: kPrimaryColor)),),
+              child:const Text('privacy policy',style: TextStyle(color: kPrimaryColor)),),
           ],
         ),
       ],

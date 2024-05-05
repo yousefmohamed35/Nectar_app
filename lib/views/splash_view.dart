@@ -13,6 +13,7 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+  @override
   void initState() {
   bool  isVisited = SharedPereferenceHelper().getData(key: 'isOnBoard') ?? false;  
      Future.delayed(const Duration(seconds: 5), () {

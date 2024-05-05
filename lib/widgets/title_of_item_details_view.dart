@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/widgets/description_text.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
 class TitleOfItemDetailsView extends StatelessWidget {
