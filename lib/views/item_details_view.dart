@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/widgets/banar_image.dart';
 import 'package:nectarapp/widgets/custom_add_and_decrease_item.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/description_text.dart';
@@ -34,12 +35,12 @@ class ItemDetailsView extends StatelessWidget {
               width: double.infinity,
             ),
             Positioned(
-            top: 40.h,
+            //top: 40.h,
             left: 40.w,
               child: SizedBox(
-                width: 329.w,
-                height: 200.h,
-                child: Image.asset('assets/images/banana.png',))),
+                width: 350.w,
+                height: 250.h,
+                child:const BanarImage(image: 'assets/images/banana.png',))),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 16,vertical: 24),
               child: Column(

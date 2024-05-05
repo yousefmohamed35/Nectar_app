@@ -30,7 +30,7 @@ class HomeViewBody extends StatelessWidget {
               child: SingleChildScrollView(
                 child: Column(
                   children: [
-                    const BanarImage(),
+                    const BanarImage(image: 'assets/images/banner.jpg',),
                     const TheTitleOfCategorySection(
                       hText: 'Exclusive Offer',
                     ),

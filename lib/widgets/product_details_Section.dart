@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
 class ProductDetailsSection extends StatelessWidget {
@@ -9,12 +8,16 @@ class ProductDetailsSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    return Column(
       children: [
-    const  HeaderText(text: 'Product Details',),
-      Icon(Icons.chevron_right,size: 48.sp,),
-      ]
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+        const  HeaderText(text: 'Product Details',),
+         
+          ]
+        ),
+      ],
     );
   }
 }
