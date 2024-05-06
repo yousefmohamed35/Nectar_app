@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/helper/shared_perferance.dart';
+import 'package:nectarapp/views/exploer_view.dart';
 import 'views/splash_view.dart';
 
 void main() async {
@@ -30,7 +31,7 @@ class NectarApp extends StatelessWidget {
             locale: DevicePreview.locale(context),
             builder: DevicePreview.appBuilder,
             debugShowCheckedModeBanner: false,
-            home:const  SplashView(),
+            home:const  ExploreView(),
           );
         });
   }
