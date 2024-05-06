@@ -26,6 +26,7 @@ class CustomItemCard extends StatelessWidget {
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
           const CustomCategoryImage(),  
             SizedBox(height: 30.h,),
