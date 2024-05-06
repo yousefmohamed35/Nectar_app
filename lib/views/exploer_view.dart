@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectarapp/widgets/custom_item_for_explore_view.dart';
 import 'package:nectarapp/widgets/custom_search_bar.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
@@ -15,6 +16,7 @@ class ExploreView extends StatelessWidget {
       body: Column(
         children: [
         CustomSearchBar(),
+        CustomItemForExploreView(),
       ],),
     );
   }
