@@ -17,7 +17,7 @@ class GridViewItemExploerView extends StatelessWidget {
       crossAxisSpacing: 15.h,
       childAspectRatio: 0.9,
       children: List.generate(10, (index) {
-        return const CustomItemForExploreView();
+        return  CustomItemForExploreView(index: index,);
       }),
     );
   }

@@ -13,10 +13,10 @@ class CustomListViewBoxGroceries extends StatelessWidget {
         physics: const BouncingScrollPhysics(),
         itemCount: 10,
         itemBuilder: (context, index) {
-        return index==0?const Padding(
-          padding:  EdgeInsets.only(left: 16),
-          child: CustomBoxGroceries(),
-        ): const CustomBoxGroceries();
+        return index==0?Padding(
+          padding:  EdgeInsets.only(left: 16.sp),
+          child: CustomBoxGroceries(index: index,),
+        ):  CustomBoxGroceries(index: index,);
       }),
     );
   }
