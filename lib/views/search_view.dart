@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/widgets/custom_item.dart';
 import 'package:nectarapp/widgets/custom_search_bar.dart';
 
 class SearchView extends StatelessWidget {
@@ -8,19 +10,17 @@ class SearchView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
      appBar: AppBar(
+      scrolledUnderElevation: 3,
       title: const CustomSearchBar(),
       actions: [
         Padding(
-          padding: const EdgeInsets.all(8.0),
+          padding: const EdgeInsets.only(right: 16),
           child: Image.asset('assets/images/pagefilter.png'),
         )
       ],
      ),
-     body: GridView.count(crossAxisCount: 2,
-     children: [
-      C
-     ],
-     ),
+     body: SearchViewBody(),
     );
   }
 }
+
