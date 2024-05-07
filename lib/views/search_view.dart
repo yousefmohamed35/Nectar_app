@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/widgets/custom_item.dart';
 import 'package:nectarapp/widgets/custom_search_bar.dart';
+import 'package:nectarapp/widgets/search_view_body.dart';
 
 class SearchView extends StatelessWidget {
   const SearchView({super.key});
@@ -19,7 +18,7 @@ class SearchView extends StatelessWidget {
         )
       ],
      ),
-     body: SearchViewBody(),
+     body: const SearchViewBody(),
     );
   }
 }

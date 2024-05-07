@@ -16,7 +16,7 @@ class SearchViewBody extends StatelessWidget {
       mainAxisSpacing: 15.h,
       crossAxisSpacing: 5.w,
       childAspectRatio: 0.65,
-      children:List.generate(13, (index) => CustomItemCard()),
+      children:List.generate(13, (index) =>const CustomItemCard()),
       ),
     );
   }
