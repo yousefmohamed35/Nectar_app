@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
 class FilterView extends StatelessWidget {
@@ -16,6 +17,12 @@ class FilterView extends StatelessWidget {
         title: const HeaderText(text: 'Filters'),
         centerTitle: true,
       ),
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: CustomButton(text: 'Apply filter',),
+      ),
+
     );
   }
 }
