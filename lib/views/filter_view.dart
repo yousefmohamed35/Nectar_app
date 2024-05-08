@@ -9,6 +9,7 @@ class FilterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+    
       appBar: AppBar(
         leading: IconButton(
           onPressed: (){},
@@ -18,11 +19,16 @@ class FilterView extends StatelessWidget {
         centerTitle: true,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: CustomButton(text: 'Apply filter',),
+      bottomNavigationBar: Container(
+        color: const Color(0xffF2F3F2),
+        padding: EdgeInsets.symmetric(horizontal: 16.sp,vertical: 16.sp),
+        child:const CustomButton(text: 'Apply filter',)),
+     body: Container(
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(40.sp),topRight: Radius.circular(40.sp)),
       ),
-
+     ),
     );
   }
 }
