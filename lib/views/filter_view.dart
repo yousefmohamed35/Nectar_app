@@ -1,5 +1,8 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/constants.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
@@ -9,26 +12,55 @@ class FilterView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-    
       appBar: AppBar(
         leading: IconButton(
-          onPressed: (){},
-          icon:  Icon(Icons.close,size: 32.sp,color: Colors.black,),
+          onPressed: () {},
+          icon: Icon(
+            Icons.close,
+            size: 32.sp,
+            color: Colors.black,
+          ),
         ),
         title: const HeaderText(text: 'Filters'),
         centerTitle: true,
       ),
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       bottomNavigationBar: Container(
-        color: const Color(0xffF2F3F2),
-        padding: EdgeInsets.symmetric(horizontal: 16.sp,vertical: 16.sp),
-        child:const CustomButton(text: 'Apply filter',)),
-     body: Container(
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(40.sp),topRight: Radius.circular(40.sp)),
+          color: const Color(0xffF2F3F2),
+          padding: EdgeInsets.symmetric(horizontal: 16.sp, vertical: 16.sp),
+          child: const CustomButton(
+            text: 'Apply filter',
+          )),
+      body: Container(
+        decoration: BoxDecoration(
+          color: const Color(0xffF2F3F2),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(40.sp),
+              topRight: Radius.circular(40.sp)),
+        ),
+        child: Column(
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const HeaderText(
+                text: 'Categories',
+              ),
+              Row(
+                children: [
+                  Transform.scale(
+                    scale: 1.4,
+                    child: Checkbox(  
+                      shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),  
+                      activeColor: kPrimaryColor,
+                      visualDensity: VisualDensity.comfortable,
+                      value: true, onChanged: (value){}),
+                  ),
+                  Text('Eggs',style: TextStyle(color: Colors.black,fontSize: 20.sp),),
+                ],
+              )
+              
+            ]),
       ),
-     ),
     );
   }
 }
