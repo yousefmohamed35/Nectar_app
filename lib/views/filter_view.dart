@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
-import 'package:nectarapp/widgets/custom_check_box_list.dart';
-import 'package:nectarapp/widgets/description_text.dart';
+import 'package:nectarapp/widgets/filter_view_body.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
 class FilterView extends StatelessWidget {
@@ -30,7 +29,7 @@ class FilterView extends StatelessWidget {
           child: const CustomButton(
             text: 'Apply filter',
           )),
-      body: FilterViewBody(),
+      body: const FilterViewBody(),
     );
   }
 }
