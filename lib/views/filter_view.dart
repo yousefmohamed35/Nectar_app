@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
+
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/constants.dart';
+
 import 'package:nectarapp/widgets/custom_button.dart';
+import 'package:nectarapp/widgets/custom_check_box_list.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
 class FilterView extends StatelessWidget {
@@ -47,7 +47,7 @@ class FilterView extends StatelessWidget {
               ),
               Row(
                 children: [
-                  CustomCheckListBox(),
+                const  CustomCheckListBox(),
                   Text('Eggs',style: TextStyle(color: Colors.black,fontSize: 20.sp),),
                 ],
               )
