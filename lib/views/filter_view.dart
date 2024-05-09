@@ -30,24 +30,7 @@ class FilterView extends StatelessWidget {
           child: const CustomButton(
             text: 'Apply filter',
           )),
-      body: Container(
-        decoration: BoxDecoration(
-          color: const Color(0xffF2F3F2),
-          borderRadius: BorderRadius.only(
-              topLeft: Radius.circular(40.sp),
-              topRight: Radius.circular(40.sp)),
-        ),
-        child: Column(
-            mainAxisSize: MainAxisSize.max,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              const HeaderText(
-                text: 'Categories',
-              ),
-              CustomCheckListBox(text: 'Eggs',)
-              
-            ]),
-      ),
+      body: FilterViewBody(),
     );
   }
 }

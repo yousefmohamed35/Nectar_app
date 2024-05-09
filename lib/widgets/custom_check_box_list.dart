@@ -19,7 +19,7 @@ class _CustomCheckListBoxState extends State<CustomCheckListBox> {
     return Row(
       children: [
         Transform.scale(
-          scale: 1.4,
+          scale: 1.4.sp,
           child: Checkbox(
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(5)),
@@ -31,6 +31,7 @@ class _CustomCheckListBoxState extends State<CustomCheckListBox> {
                 setState(() {});
               }),
         ),
+        
         Text(
           widget.text,
           style: TextStyle(
