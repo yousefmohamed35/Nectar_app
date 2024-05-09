@@ -47,14 +47,7 @@ class FilterView extends StatelessWidget {
               ),
               Row(
                 children: [
-                  Transform.scale(
-                    scale: 1.4,
-                    child: Checkbox(  
-                      shape:RoundedRectangleBorder(borderRadius: BorderRadius.circular(5)),  
-                      activeColor: kPrimaryColor,
-                      visualDensity: VisualDensity.comfortable,
-                      value: true, onChanged: (value){}),
-                  ),
+                  CustomCheckListBox(),
                   Text('Eggs',style: TextStyle(color: Colors.black,fontSize: 20.sp),),
                 ],
               )
@@ -64,3 +57,4 @@ class FilterView extends StatelessWidget {
     );
   }
 }
+
