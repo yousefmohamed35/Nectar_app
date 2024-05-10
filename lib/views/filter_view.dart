@@ -4,9 +4,14 @@ import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/filter_view_body.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
-class FilterView extends StatelessWidget {
+class FilterView extends StatefulWidget {
   const FilterView({super.key});
 
+  @override
+  State<FilterView> createState() => _FilterViewState();
+}
+
+class _FilterViewState extends State<FilterView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
