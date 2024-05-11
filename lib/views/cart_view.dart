@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nectarapp/widgets/custom_choosen_product_cart.dart';
 import 'package:nectarapp/widgets/header_text.dart';
 
 class CartView extends StatelessWidget {
@@ -13,7 +14,12 @@ class CartView extends StatelessWidget {
         bottom: PreferredSize(preferredSize: Size.fromHeight(1), child: Container(
           color: Color(0xffE2E2E2),
           height: 1,
-        )),
+        ),),
+      ),
+      body: Column(
+        children: [
+          CustomChoosenProductCard(),
+        ]
       ),
     );
   }
