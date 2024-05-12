@@ -9,54 +9,49 @@ class CustomChoosenProductCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-    
-      decoration: BoxDecoration(
+    return Row(
       
-      ),
-      child: Row(
-        
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: [
-          Image.asset(
-            'assets/images/banana.png',
-            height: 54.52.h.h,
-            width: 68.62.w,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Image.asset(
+          'assets/images/banana.png',
+          height: 54.52.h.h,
+          width: 68.62.w,
+        ),
+        Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+          Text(
+            'Organic Banana',
+            style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600),
           ),
-          Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text(
-              'Organic Banana',
-              style: TextStyle(fontSize: 24.sp, fontWeight: FontWeight.w600),
-            ),
-            const DescriptionText(
-              text: '7pcs, priceg',
-            ),
-            SizedBox(
-              height: 20.h,
-            ),
-            CustomAddAndDecreaseItem(),
-          ]),
+          const DescriptionText(
+            text: '7pcs, priceg',
+          ),
           SizedBox(
-            width: 20.w,
+            height: 20.h,
           ),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            crossAxisAlignment: CrossAxisAlignment.end,
-            children: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.close,
-                size: 24.sp,
-              ),
+        const  CustomAddAndDecreaseItem(),
+        ]),
+        SizedBox(
+          width: 20.w,
+        ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          crossAxisAlignment: CrossAxisAlignment.end,
+          children: [
+          IconButton(
+            onPressed: () {},
+            icon: Icon(
+              Icons.close,
+              size: 32.sp,
+              color: Colors.grey,
             ),
-            SizedBox(height: 40.h,),
-            HeaderText(
-              text: '\$20.00',
-            ),
-          ])
-        ],
-      ),
+          ),
+          SizedBox(height: 40.h,),
+        const HeaderText(
+            text: '\$20.00',
+          ),
+        ])
+      ],
     );
   }
 }
