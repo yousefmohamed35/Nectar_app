@@ -10,7 +10,6 @@ class CustomChoosenProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Image.asset(
@@ -29,28 +28,31 @@ class CustomChoosenProductCard extends StatelessWidget {
           SizedBox(
             height: 20.h,
           ),
-        const  CustomAddAndDecreaseItem(),
+          const CustomAddAndDecreaseItem(),
         ]),
         SizedBox(
           width: 20.w,
         ),
         Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          crossAxisAlignment: CrossAxisAlignment.end,
-          children: [
-          IconButton(
-            onPressed: () {},
-            icon: Icon(
-              Icons.close,
-              size: 32.sp,
-              color: Colors.grey,
-            ),
-          ),
-          SizedBox(height: 40.h,),
-        const HeaderText(
-            text: '\$20.00',
-          ),
-        ])
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            crossAxisAlignment: CrossAxisAlignment.end,
+            children: [
+              IconButton(
+                onPressed: () {
+                },
+                icon: Icon(
+                  Icons.close,
+                  size: 32.sp,
+                  color: Colors.grey,
+                ),
+              ),
+              SizedBox(
+                height: 40.h,
+              ),
+              const HeaderText(
+                text: '\$20.00',
+              ),
+            ])
       ],
     );
   }

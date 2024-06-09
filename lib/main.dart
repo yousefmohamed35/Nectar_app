@@ -32,7 +32,7 @@ class NectarApp extends StatelessWidget {
             locale: DevicePreview.locale(context),
             builder: DevicePreview.appBuilder,
             debugShowCheckedModeBanner: false,
-            home:const  FavouriteView(),
+            home:const  CartView(),
           );
         });
   }

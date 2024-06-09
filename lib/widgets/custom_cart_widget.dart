@@ -8,7 +8,8 @@ class CustomCartWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: Column(children: [
+      child: Column(
+        children: [
         SizedBox(
           height: 30.h,
         ),
