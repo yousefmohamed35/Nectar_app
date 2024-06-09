@@ -21,80 +21,7 @@ class CartView extends StatelessWidget {
           children: [
             CustomButton(
               onTap: () {
-                showModalBottomSheet(
-                    context: context,
-                    builder: (context) {
-                      return Padding(
-                        padding: EdgeInsets.only(
-                          right: 16,
-                          left: 16,
-                          top: 24,
-                          bottom: MediaQuery.of(context).viewInsets.bottom + 16,
-                        ),
-                        child: SingleChildScrollView(
-                          child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              mainAxisAlignment: MainAxisAlignment.spaceAround,
-                              children: [
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    const HeaderText(
-                                      text: 'Checkout',
-                                    ),
-                                    IconButton(
-                                        onPressed: () {
-                                          Navigator.pop(context);
-                                        },
-                                        icon: Icon(
-                                          Icons.close,
-                                          color: Colors.black,
-                                          size: 32.sp,
-                                        ))
-                                  ],
-                                ),
-                                const Divider(),
-                                Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
-                                  children: [
-                                    Text(
-                                      'Dlivery',
-                                      style: TextStyle(
-                                        fontSize: 24.sp,
-                                        fontWeight: FontWeight.w600,
-                                        color: Colors.grey,
-                                      ),
-                                    ),
-                                    Row(
-                                      children: [
-                                       const HeaderText(text: 'Select Method'),
-                                        IconButton(
-                                            onPressed: () {},
-                                            icon:const Icon(
-                                              Icons.arrow_forward_ios,
-                                              color: Colors.black,
-                                            ))
-                                      ],
-                                    )
-                                  ],
-                                ),
-                                CustomButton(
-                                  onTap: () {
-                                    Navigator.pushReplacement(
-                                        context,
-                                        MaterialPageRoute(
-                                          builder: (context) =>
-                                              const ResetPasswordAccept(),
-                                        ));
-                                  },
-                                  text: 'Place Order',
-                                ),
-                              ]),
-                        ),
-                      );
-                    });
+                modelBottomSheet(context);
               },
               text: 'Go to Checkout',
             ),
@@ -138,6 +65,174 @@ class CartView extends StatelessWidget {
         child: ListView(
             children: List.generate(10, (index) => const CustomCartWidget())),
       ),
+    );
+  }
+
+  Future<dynamic> modelBottomSheet(BuildContext context) {
+    return showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return Padding(
+            padding: EdgeInsets.only(
+              right: 16,
+              left: 16,
+              top: 24,
+              bottom: MediaQuery.of(context).viewInsets.bottom + 16,
+            ),
+            child: SingleChildScrollView(
+              child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        const HeaderText(
+                          text: 'Checkout',
+                        ),
+                        IconButton(
+                            onPressed: () {
+                              Navigator.pop(context);
+                            },
+                            icon: Icon(
+                              Icons.close,
+                              color: Colors.black,
+                              size: 32.sp,
+                            ))
+                      ],
+                    ),
+                    const Divider(),
+                    const RowCheckout(
+                      text: 'Select Method',
+                      title: 'Delivery',
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const Divider(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const RowCheckout(
+                      title: 'Payment',
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const Divider(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const RowCheckout(
+                      text: 'Pick discount',
+                      title: 'Promo Code',
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const Divider(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const RowCheckout(
+                      text: '\$13.95',
+                      title: 'Total Cost',
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const Divider(),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    const DescriptionText(
+                        text: 'By placing an order you agree to our'),
+                    Row(
+                      children: [
+                        TextButton(
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              minimumSize:const Size(50, 30),
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              'Terms',
+                              style: TextStyle(color: Colors.black),
+                            )),
+                        const DescriptionText(
+                          text: 'And ',
+                        ),
+                        TextButton(
+                            style: TextButton.styleFrom(
+                              padding: EdgeInsets.zero,
+                              minimumSize: const Size(50, 30),
+                              tapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                            ),
+                            onPressed: () {},
+                            child: const Text(
+                              'Conditions',
+                              style: TextStyle(color: Colors.black),
+                            )),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 10.h,
+                    ),
+                    CustomButton(
+                      onTap: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const ResetPasswordAccept(),
+                            ));
+                      },
+                      text: 'Place Order',
+                    ),
+                  ]),
+            ),
+          );
+        });
+  }
+}
+
+class RowCheckout extends StatelessWidget {
+  const RowCheckout({
+    super.key,
+    required this.title,
+    this.text,
+    this.iconData,
+  });
+  final String? text;
+  final IconData? iconData;
+  final String title;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: [
+        Text(
+          title,
+          style: TextStyle(
+            fontSize: 24.sp,
+            fontWeight: FontWeight.w600,
+            color: Colors.grey,
+          ),
+        ),
+        Row(
+          children: [
+            title == 'Payment'
+                ? Image.asset('assets/images/card.png')
+                : HeaderText(text: text!),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.arrow_forward_ios,
+                  color: Colors.black,
+                ))
+          ],
+        ),
+      ],
     );
   }
 }
