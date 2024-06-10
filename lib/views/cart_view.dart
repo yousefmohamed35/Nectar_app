@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:nectarapp/views/accept_order.dart';
 import 'package:nectarapp/views/reset_password_accept.dart';
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_cart_widget.dart';
@@ -150,7 +151,7 @@ class CartView extends StatelessWidget {
                         TextButton(
                             style: TextButton.styleFrom(
                               padding: EdgeInsets.zero,
-                              minimumSize:const Size(50, 30),
+                              minimumSize: const Size(50, 30),
                               tapTargetSize: MaterialTapTargetSize.shrinkWrap,
                             ),
                             onPressed: () {},
@@ -179,11 +180,12 @@ class CartView extends StatelessWidget {
                     ),
                     CustomButton(
                       onTap: () {
-                        Navigator.pushReplacement(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const ResetPasswordAccept(),
-                            ));
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) {
+                            return const AcceptOrderView();
+                          }),
+                        );
                       },
                       text: 'Place Order',
                     ),
