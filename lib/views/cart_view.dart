@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:nectarapp/views/accept_order.dart';
-import 'package:nectarapp/views/reset_password_accept.dart';
+
 import 'package:nectarapp/widgets/custom_button.dart';
 import 'package:nectarapp/widgets/custom_cart_widget.dart';
 import 'package:nectarapp/widgets/description_text.dart';
@@ -180,12 +179,11 @@ class CartView extends StatelessWidget {
                     ),
                     CustomButton(
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(builder: (context) {
-                            return const AcceptOrderView();
-                          }),
-                        );
+                        showDialog(
+                            context: context,
+                            builder: (context) {
+                              return DiaolgWidget();
+                            });
                       },
                       text: 'Place Order',
                     ),
@@ -193,6 +191,61 @@ class CartView extends StatelessWidget {
             ),
           );
         });
+  }
+}
+
+class DiaolgWidget extends StatelessWidget {
+  const DiaolgWidget({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
+      backgroundColor: Colors.white,
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 16.w, vertical: 24.h),
+        width: 364.w,
+        height: 605.h,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.close,
+                      size: 24.sp,
+                      color: Colors.black,
+                    )),
+              ],
+            ),
+            Image.asset(
+              'assets/images/errorimage.png',
+              height: 222.h,
+              width: 221.w,
+            ),
+            SizedBox(
+              height: 20.h,
+            ),
+            const HeaderText(text: 'Oops! Order Failed'),
+            SizedBox(
+              height: 10.h,
+            ),
+            const DescriptionText(text: 'Something went tembly wrong.'),
+            const Spacer(),
+            const CustomButton(text: 'Please try again'),
+            TextButton(
+              onPressed: () {},
+              child: const HeaderText(text: 'back to home'),
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
 
